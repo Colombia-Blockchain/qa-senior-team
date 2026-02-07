@@ -50,7 +50,7 @@ async def invoke_claude(
     cmd = ["claude", "--print", "--output-format", "json"]
 
     if resume and session_id:
-        cmd.extend(["--continue", session_id])
+        cmd.extend(["--resume", session_id])
     elif session_id:
         cmd.extend(["--session-id", session_id])
 
